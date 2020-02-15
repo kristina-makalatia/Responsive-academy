@@ -1,0 +1,205 @@
+/*Base classes*/
+.d-flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+}
+.container {
+	max-width: 1170px;
+	width:100%;
+	margin:0 auto;
+}
+
+
+
+/*header*/
+.header-wraper{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,207cca+64,7db9e8+75 */
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1e5799 0%, #207cca 64%, #7db9e8 75%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #1e5799 0%,#207cca 64%,#7db9e8 75%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #1e5799 0%,#207cca 64%,#7db9e8 75%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+}
+.logo {
+	width: 100px;
+}
+.nav-ul {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.right-block {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+.burger-icon {
+	display: none;
+}
+.burger-bar {
+	border:1px solid grey;
+	padding: 2px;
+	font-size: 25px;
+}
+.burger-bar:hover{
+	color: yellow;
+}
+
+
+/*Blue-section*/
+.blue-bg{
+	background-color: blue;
+	padding: 30px 0;
+}
+.video-wraper {
+	background-color: #fff;
+	max-width:570px;
+	width: 100%;
+	height: 320px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+.video-wraper iframe {
+    width: 100%;
+    height: 100%;
+}
+.video-flex {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+
+}
+
+/*Images-section*/
+.grey-bg {
+	background-color: #BDCCD4;
+	padding: 30px 0;
+}
+.image-wraper img{
+	width: 270px;
+	display: block;
+}
+.image-title{
+	background-color: #E6E6E6;
+	padding: 30px;
+}
+.images-flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+}
+.image-wraper:nth-child(5),
+.image-wraper:nth-child(6),
+.image-wraper:nth-child(7),
+.image-wraper:nth-child(8) {
+	margin-top: 20px;
+}
+
+.bg-image {
+	background-image: url('../img/bg.jpg');
+	height: 800px;
+	background-repeat: no-repeat;
+	width:1170px;
+	background-size: cover;
+	background-position: bottom left;
+	position: relative;
+}
+.absolute {
+	position: absolute;
+	top:50px;
+	left: 0;
+	color: #fff;
+	font-size: 50px;
+}
+
+
+/*Respnsive*/
+@media (max-width: 1180px) {
+	 .container {
+  	padding: 0 15px;
+  }
+}
+@media (max-width: 1024px) {
+ /* .navigation {
+  	display: none;
+  }*/
+  .burger-icon {
+  	display: block;
+  }
+  .navigation-li:not(.active){
+  	display: none;
+  }
+  .video-flex {
+  	/*flex-wrap: wrap;
+  	justify-content: center;*/
+  	-webkit-box-orient: vertical;
+  	-webkit-box-direction: normal;
+  	    -ms-flex-direction: column;
+  	        flex-direction: column;
+  	-webkit-box-align: center;
+  	    -ms-flex-align: center;
+  	        align-items: center;
+  }
+  .video-wraper:last-child {
+  	margin-top: 15px;
+  }
+  .bg-image {
+	background-image: url('../img/image1.png');
+  }
+}
+@media (max-width: 768px) {
+	.video-flex {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: column-reverse;
+		        flex-direction: column-reverse;
+	  	-webkit-box-align: center;
+	  	    -ms-flex-align: center;
+	  	        align-items: center;
+	}
+	.image-wraper {
+		width: 32%;
+	}
+	.image-wraper img {
+		width: 100%;
+	}
+	.image-wraper:nth-child(4){
+		margin-top: 15px;
+	}
+}
+@media (max-width: 480px) {
+	.image-wraper {
+		width: 48%;
+	}
+	.image-wraper:nth-child(3){
+		margin-top: 15px;
+	}
+}
+@media (max-width: 380px) {
+	.image-wraper {
+		width: 100%;
+	}
+	.image-wraper:nth-child(2){
+		margin-top: 15px;
+	}
+}
